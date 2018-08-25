@@ -2,40 +2,157 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
-		h2 {
-			font-family: 'Lobster';
-			font-size: 22px;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        /* ---- reset ---- */
 
-		h1 {
-			font-family: 'Open Sans Condensed';
-			font-size: 30px;
-		}
-		.button5 {background-color: black; color: white;} /* Black */
+        body {
+            margin: 0;
+            font: normal 75% Arial, Helvetica, sans-serif;
+            background-color: #000000;
+        }
 
-	</style>
-	<title>eydean</title>
+        canvas {
+            display: block;
+            /* vertical-align: bottom; */
+        }
+
+        /* ---- particles.js container ---- */
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            z-index: -1;
+        }
+
+        /* ---- stats.js ---- */
+
+        .count-particles {
+            background: #000022;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            width: 80px;
+            color: #13e8e9;
+            font-size: 0.8em;
+            text-align: left;
+            text-indent: 4px;
+            line-height: 14px;
+            padding-bottom: 2px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .js-count-particles {
+            font-size: 1.1em;
+        }
+
+        #stats,
+        .count-particles {
+            -webkit-user-select: none;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #stats {
+            border-radius: 3px 3px 0 0;
+            overflow: hidden;
+        }
+
+        .count-particles {
+            border-radius: 0 0 3px 3px;
+        }
+
+        #preloader {
+            width: 500px;
+            height: 500px;
+        }
+
+        .my-content p {
+            color: white;
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 3rem
+        }
+
+        .my-content button {
+            color: white;
+            border: 1px solid white;
+            background-color: transparent;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        .my-content button:hover {
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+        }
+
+        .my-content #email {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            font-size: 1rem;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 200px;
+            transition: all .2s ease-out;
+        }
+
+        .my-content #email:focus {
+            outline: none;
+            width: 300px;
+        }
+    </style>
 </head>
 
 <body>
-	<center>
-		<img src="EydeanGIF.gif" alt="eydean"></img>
-		<h1>Something's Cooking</h1>
-		<h2>Patience is a virtue!</h2>
-
-	<form method="POST" action="https://formspree.io/manishmarahatta1996@gmail.com">
-		<p>Get Notified
-		<input class="w3-input w3-animate-input" type="email" name="email" style="width:135px"><br>
-	  <button class="button button5" type="submit">Send</button>
-	</form>
-	</center>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <img id="preloader" src="preloader.svg" alt="Eydean">
+        </div>
+        <div class="my-content row justify-content-center">
+            <p>
+                Something's cooking
+                </br>
+                <b>
+                    <i>Patience is virtue!</i>
+                </b>
+            </p>
+        </div>
+        <div class="my-content row justify-content-center">
+            <form method="POST" action="https://formspree.io/manishmarahatta1996@gmail.com">
+                <center>
+                    <input type="email" name="email" id="email" required="true" />
+                    <br>
+                    <button>Get Notified</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script>
+        particlesJS("particles-js", { "particles": { "number": { "value": 24, "density": { "enable": true, "value_area": 789.1476416322727 } }, "color": { "value": "#a2c2e6" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 1.603412060865523, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 182.71737276780266, "size": 12.181158184520177, "duration": 8.12077212301345, "opacity": 0.19489853095232282, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": false });
+    </script>
 </body>
 
 </html>
