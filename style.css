@@ -1,0 +1,17 @@
+:root {
+    --pm-color: #00aed6;
+    --alt-color: #4b5d71;
+    --font-color: #5b5775;
+    --standard-color: #ffffff;
+}
+
+.navigation-menu {
+    margin:4% 8%;
+}
+
+.navbar-brand span {
+    padding-left: 10%;
+    color: var(--pm-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
