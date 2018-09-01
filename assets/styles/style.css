@@ -218,6 +218,7 @@ body {
     font-weight: bold;
     color: var(--pm-color);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .freedom-button:hover {
