@@ -231,6 +231,10 @@ body {
 .rising-star .title{
     font-weight: bold;
     font-size: 5rem;
+    background: -webkit-linear-gradient(1turn, var(--alt-color), var(--pm-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .rising-star p {
