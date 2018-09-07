@@ -3,6 +3,7 @@
     --alt-color: #4b5d71;
     --font-color: #5b5775;
     --standard-color: #ffffff;
+    --aux-color: #dc3545;
 }
 
 ::selection {
@@ -240,6 +241,45 @@ body {
 .rising-star p {
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+/* Contact*/
+
+.contact{
+    background: var(--alt-color);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 80%;
+}
+.contact .form-control{
+    border-radius:1rem;
+}
+.contact form{
+    padding: 14%;
+}
+.contact form .row{
+    margin-bottom: -7%;
+}
+.contact h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: var(--standard-color);
+}
+.contact .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: var(--aux-color);
+    font-weight: 600;
+    color: var(--standard-color);
+    cursor: pointer;
+}
+.contact .btnContact:hover {
+    color: var(--alt-color);
+    font-weight: 800;
+    transition: 0.2s;
 }
 
 /* footer */
