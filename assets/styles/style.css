@@ -230,13 +230,13 @@ body {
 
 @media (min-width: 1200px) {
     .open-source .carousel-caption {
-        bottom: 40%;
+        bottom: 43%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .open-source .carousel-caption {
-        bottom: 37%;
+        bottom: 38%;
     }
     .open-source .carousel-caption .cover .title span{
         font-size: 70%;
@@ -245,7 +245,7 @@ body {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .open-source .carousel-caption {
-        bottom: 33%;
+        bottom: 36%;
     }
     .open-source .carousel-caption .cover .title span{
         font-size: 70%;
