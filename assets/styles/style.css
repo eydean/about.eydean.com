@@ -230,19 +230,22 @@ body {
 
 @media (min-width: 1200px) {
     .open-source .carousel-caption {
-        bottom: 45%;
+        bottom: 40%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .open-source .carousel-caption {
-        bottom: 40%;
+        bottom: 37%;
+    }
+    .open-source .carousel-caption .cover .title span{
+        font-size: 70%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .open-source .carousel-caption {
-        bottom: 35%;
+        bottom: 33%;
     }
     .open-source .carousel-caption .cover .title span{
         font-size: 70%;
@@ -318,13 +321,6 @@ body {
     color: var(--pm-color);
 }
 
-@media (min-width: 1200px) {
-    .freedom .carousel-caption {
-        bottom: -5%;
-        right: 13%
-    }
-}
-
 .freedom .pre-title{
     font-weight: bold;
     font-size: 1.5rem;  
@@ -353,10 +349,61 @@ body {
     color: var(--standard-color);
 }
 
+@media (min-width: 1200px) {
+    .freedom .carousel-caption {
+        bottom: -5%;
+        right: 13%
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .freedom .carousel-caption {
+        bottom: -10%;
+        right: 13%
+    }
+}
+
+@media (max-width: 991.98px) {
+    .freedom .carousel-caption {
+        bottom: -15%;
+        right: 13%
+    }
+    .freedom .pre-title {
+        font-size: 1rem;
+    }
+    .freedom .title {
+        font-size: 4rem;
+    }
+    .freedom-button {
+        /* padding: 2px 5px; */
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .freedom {
+        background-image: none;
+        background-color: var(--standard-color);
+        padding: 0% 5%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .freedom {
+        background-image: none;
+    }
+    .freedom {
+        margin-top: 10%;
+        margin-bottom: 10%
+    }
+}
+
+
 /* rising star */
 
 .rising-star {
     margin-top: 10%;
+    /* display: none; */
 }
 
 .rising-star .title{
@@ -380,6 +427,7 @@ footer {
     background-color: var(--alt-color);
     color: var(--standard-color);
     padding: 4%;
+    display: none;
 }
 
 footer .title {
