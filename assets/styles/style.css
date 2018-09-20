@@ -481,3 +481,32 @@ footer .footer-bottom ul {
 footer .footer-bottom a {
     color: var(--standard-color);
 }
+
+.footer-bottom ul li a i{
+    font-size: 2rem
+}
+
+@media (max-width: 576px) {
+    .footer-top {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-bottom {
+        font-size: 0.6rem;
+    }
+    .footer-bottom ul li {
+        float: right;
+    }
+    .footer-bottom ul li a i{
+        font-size: 1rem
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer-bottom ul .social-media {
+        float: left;
+        padding-top: 1rem;
+    }
+}
